@@ -65,10 +65,11 @@ p({
     import foam.nanos.notification.email.EmailMessageValidationPropertyService;
 
     EmailPropertyService[] eps = new EmailPropertyService[4];
-    eps[0] = new EmailTemplateApplyEmailPropertyService.Builder(x).build();
-    eps[1] = new GroupEmailTemplateService.Builder(x).build();
-    eps[2] = new EmailConfigEmailPropertyService.Builder(x).build();
-    eps[3] = new EmailMessageValidationPropertyService.Builder(x).build();
+    eps[0] = new ApplyBaseArgumentsEmailPropertyService.Builder(x).build();
+    eps[1] = new EmailTemplateApplyEmailPropertyService.Builder(x).build();
+    eps[2] = new GroupEmailTemplateService.Builder(x).build();
+    eps[3] = new EmailConfigEmailPropertyService.Builder(x).build();
+    eps[4] = new EmailMessageValidationPropertyService.Builder(x).build();
     return new ChainedPropertyService.Builder(x).setData(eps).build();
   """
 })
